@@ -22,7 +22,7 @@ function MiFuncion($nombre, $numero_cuenta,$csc,$monto,$nombre_negocio,$numero_f
 	if (sizeof($row) >= 1) {
 		$done=true;
 		$query2="insert into bill (name,numbercard,csc,rode,namebusiness,numberbill,datee,email)
-    		values($nombre,$numero_cuenta,$csc,$monto,$nombre_negocio,$numero_factura,$fecha,$email)";
+    		values('$nombre','$numero_cuenta',$csc,$monto,'$nombre_negocio',$numero_factura,'$fecha','$email')";
     		$resultado2 = mysqli_query($conn,$query2);	
 	}
 	else{
